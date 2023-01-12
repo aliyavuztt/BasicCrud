@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BasicCrud.Core\BasicCrud.Core.csproj" />
+    <ProjectReference Include="..\BasicCrud.DataAccess\BasicCrud.DataAccess.csproj" />
+    <ProjectReference Include="..\BasicCrud.Entities\BasicCrud.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
