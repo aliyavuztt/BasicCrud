@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BasicCrud.Core\BasicCrud.Core.csproj" />
   </ItemGroup>
 

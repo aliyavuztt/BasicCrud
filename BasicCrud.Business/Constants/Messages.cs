@@ -2,16 +2,25 @@
 {
     public static class Messages
     {
+
+        public static class User
+        {
+            public static string SuccessfulLogin()
+            {
+                return "Sisteme başarıyla giriş yaptınız.";
+            }
+            public static string UserNotFound()
+            {
+                return "Giriş yapmakta olduğunuz, kullanıcı sistemde bulunamadı.";
+            }
+        }
+
         public static class Product
         {
             public static string NotFound(bool isPlural)
             {
                 if (isPlural) return "Hiç bir ürün bulunamadı.";
                 return "Böyle bir ürün bulunamadı.";
-            }
-            public static string NotFoundById(int id)
-            {
-                return $"{id} ürün koduna ait bir ürün bulunamadı.";
             }
             public static string Add(string name)
             {
