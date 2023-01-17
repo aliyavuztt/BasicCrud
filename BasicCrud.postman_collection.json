@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "1a540206-1e3f-4ad8-a452-adee65b19e84",
+		"name": "BasicCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9944416"
+	},
+	"item": [
+		{
+			"name": "Login Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"ali\",\r\n  \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NzM5NTI0OTUsImV4cCI6MTY3Mzk5NTY5NSwiaXNzIjoid3d3LmFsaXRvcGFsb2dsdS5jb20iLCJhdWQiOiJ3d3cuYWxpdG9wYWxvZ2x1LmNvbSJ9.ioskzObCeYqq_A6mIzwOhnWY4UyJhRZoyGT1_IovVRM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Beaer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NzM5NTE2NjYsImV4cCI6MTY3Mzk5NDg2NiwiaXNzIjoid3d3LmFsaXRvcGFsb2dsdS5jb20iLCJhdWQiOiJ3d3cuYWxpdG9wYWxvZ2x1LmNvbSJ9.vV8DbT0GjvQCx5PHY98Tq3Ju0k-MNsLxBfcWi4dzCKQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":18,\r\n  \"name\": \"Ahşap Sandalye2\",\r\n  \"stock\": 10,\r\n  \"price\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NzM5NTI0OTUsImV4cCI6MTY3Mzk5NTY5NSwiaXNzIjoid3d3LmFsaXRvcGFsb2dsdS5jb20iLCJhdWQiOiJ3d3cuYWxpdG9wYWxvZ2x1LmNvbSJ9.ioskzObCeYqq_A6mIzwOhnWY4UyJhRZoyGT1_IovVRM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7197/api/products/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"stock\": 0,\r\n  \"price\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"stock\": 0,\r\n  \"price\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"stock\": 0,\r\n  \"price\": 0\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7197/api/products/16",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"products",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
